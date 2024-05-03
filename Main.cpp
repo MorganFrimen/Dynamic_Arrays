@@ -33,13 +33,27 @@ int main()
 	//for (size_t i = 0; i < vertices.size(); i++)
 	//	std::cout << vertices[i] << std::endl;
 	//
-	//vertices.erase(vertices.begin() + 1);
+	//vertices.erase(vertices.begin() + 1);.
 
-	for (Vertex& arr : vertices)
-		std::cout << arr << std::endl;
-	
+	if (vertices.empty())
+		std::cout << "The vector is empty." << std::endl;
+	else
+		for (Vertex& arr : vertices)
+			std::cout << arr << std::endl;
+		std::cout << "The vector is not empty." << std::endl;
+
 	std::vector<int> num{ 1,3,4,25,6,9,10 };
 	std::cout << "Max : " << *std::max_element(begin(num), end(num)) << std::endl;
+
+	std::vector<int> v1;
+	v1.push_back(10);
+	v1.push_back(20);
+	int& i = v1.back();
+	std::cout << "The last integer of v1 is " << i << std::endl;
+
+
+	
+
 
 	std::cin.get();
 };
